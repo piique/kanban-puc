@@ -1,9 +1,12 @@
-const TaskCard = () => {
+import "./styles.css"
+
+const TaskCard = (task) => {
 
     return (
-        <div className="card">
-            <div className="titulo-card">Tarefa 1</div>
-            <div className="descricao-card">Descrição da tarefa 1</div>
+        <div key={task?.id} className="card">
+            <div className="titulo-card">{task?.title}</div>
+            <div className="descricao-card">{task?.description}</div>
+            <div className="pomodoros-card">Pomodoro(s): {task.pomodoroCount}</div>
         </div>
     )
 }

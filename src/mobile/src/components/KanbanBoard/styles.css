@@ -1,12 +1,14 @@
 .quadro {
 	display: flex;
 	justify-content: space-between;
+	margin: 20px;
 	padding: 20px;
-    width: 1024px;
+	width: 90%;
+	min-width: 1024px;
     border: solid 5px #7dd390;
     border-radius: 10px;
     min-height: 400px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 120px);
 }
 
 .coluna {
@@ -23,22 +25,6 @@
 	margin-bottom: 10px;
 }
 
-.card {
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 10px;
-	margin-bottom: 10px;
-}
-
-.titulo-card {
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-
-.descricao-card {
-	font-size: 14px;
-}
 
 .botao-adicionar {
     background-color: #4CAF50;

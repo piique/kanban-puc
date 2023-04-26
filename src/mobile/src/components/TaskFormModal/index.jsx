@@ -10,7 +10,7 @@ function TaskFormModal({ showModal, onClose, onSubmit }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSubmit({ title, description, pomodoroCount });
+        onSubmit({ title, description, pomodoroCount, status });
         setTitle('');
         setDescription('');
         setPomodoroCount(0);
@@ -31,9 +31,9 @@ function TaskFormModal({ showModal, onClose, onSubmit }) {
 
                     <label htmlFor="status">Status:</label>
                     <select id="status" className="select-input" value={status} onChange={(e) => setStatus(e.target.value)}>
-                        <option value="A fazer">A fazer</option>
-                        <option value="Fazendo">Fazendo</option>
-                        <option value="Concluído">Concluído</option>
+                        <option value={0}>A fazer</option>
+                        <option value={1}>Fazendo</option>
+                        <option value={2}>Concluído</option>
                     </select>
 
                     <div className="buttons-wrapper">
