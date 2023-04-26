@@ -19,7 +19,7 @@ function TaskFormModal({ showModal, onClose, onSubmit }) {
     return (
         <div className={showModal ? "modal show" : "modal"}>
             <div className="modal-content">
-                <form onSubmit={handleSubmit}>
+                <form>
                     <label htmlFor="title">Título:</label>
                     <input id="title" type="text" className="form-input" value={title} onChange={(e) => setTitle(e.target.value)} />
 
@@ -38,7 +38,7 @@ function TaskFormModal({ showModal, onClose, onSubmit }) {
 
                     <div className="buttons-wrapper">
                         <button onClick={onClose} className="button-modal">Cancelar</button>
-                        <button type="submit" className="button-modal">Salvar</button>
+                        <button onClick={handleSubmit} className="button-modal">Salvar</button>
                     </div>
 
                 </form>

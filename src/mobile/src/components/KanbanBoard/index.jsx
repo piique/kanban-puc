@@ -49,7 +49,7 @@ const KanbanBoard = () => {
                     id: task.id,
                     title: task.name,
                     description: task.description,
-                    pomodoroCount: task.pomodoroCount,
+                    pomodoroCount: task.estimated_pomodoros,
                     status: task.status,
                 }));
                 console.log('_tasks', _tasks);
@@ -81,7 +81,7 @@ const KanbanBoard = () => {
             .then((response) => {
                 console.log('response', response);
                 console.log("Tarefa salva com sucesso");
-                setTasks(prevState => [...prevState, { id: prevState.length + 1, title, description, pomodoroCount, status: Number(status) }]);
+                setTasks(prevState => [...prevState, { id:response.data.id , title, description, pomodoroCount, status: Number(status) }]);
             })
             .catch((error) => {
                 console.log("Ocorreu um erro ao salvar a tarefa");
@@ -107,19 +107,19 @@ const KanbanBoard = () => {
                 <div className="coluna">
                     <div className="titulo-coluna">A fazer</div>
                     {tasksToDo.map((task) => (
-                        <TaskCard key={task.id} title={task.title} description={task.description} />
+                        <TaskCard key={task.id} task={task} />
                     ))}
                 </div>
                 <div className="coluna">
                     <div className="titulo-coluna">Fazendo</div>
                     {tasksDoing.map((task) => (
-                        <TaskCard key={task.id} title={task.title} description={task.description} />
+                        <TaskCard key={task.id} task={task} />
                     ))}
                 </div>
                 <div className="coluna">
                     <div className="titulo-coluna">Concluído</div>
                     {tasksDone.map((task) => (
-                        <TaskCard key={task.id} title={task.title} description={task.description} />
+                        <TaskCard key={task.id} task={task} />
                     ))}
                 </div>
                 <button className="botao-adicionar" onClick={() => setShowModal(true)}>Adicionar Tarefa</button>

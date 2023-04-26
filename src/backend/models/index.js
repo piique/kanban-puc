@@ -32,6 +32,7 @@ db.sequelize = sequelize
 
 db.user = require('./userModel.js')(sequelize, DataTypes)
 db.card = require('./cardModel.js')(sequelize, DataTypes)
+db.pomodoro = require('./pomodoroModel.js')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {

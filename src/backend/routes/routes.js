@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const user  = require('../controllers/user'); 
 const card  = require('../controllers/card'); 
-
+const pomodoro = require('../controllers/pomodoro.js');
 const Sequelize = require('sequelize');
 //const UserModel = require('./models/user.js'); 
 
@@ -16,10 +16,16 @@ router.post('/setManager', user.setManager)
 
 //rotas do card
 
+
 router.post('/task', card.addCard)
 router.get('/tasks', card.getAllCards)
-//router.put('/updateCard/:id', card.deleteCard)
-//router.delete('/task/:id', card.deleteCard)
+router.put('/task/:id', card.updateCard)
+router.delete('/task/:id', card.deleteCard)
+
+router.get('/all-pomodoros', pomodoro.getAllPomodoros);
+router.get('/pomodoro/:id', pomodoro.getPomodoro);
+router.post('/add-pomodoro', pomodoro.postPomodoro);
+
 
 /*
 router.post('/createUser', async (req, res) => {
