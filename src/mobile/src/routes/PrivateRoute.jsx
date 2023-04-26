@@ -5,7 +5,7 @@ const PrivateRoute = ({ children }) => {
     const isAuthenticaded = isAuthenticated();
 
     if (!isAuthenticaded) {
-        return <Navigate to="/landing" replace />;
+        return <Navigate to="/login" replace />;
     }
 
     return children;

@@ -10,9 +10,9 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
-                <Route path="/kanban" element={<PrivateRoute> <KanbanPage /> </PrivateRoute>} />
+                <Route path="/" element={<PrivateRoute> <HomePage /></PrivateRoute>} />
+                <Route path="/kanban" element={<PrivateRoute> <KanbanPage /></PrivateRoute>} />
             </Routes>
         </BrowserRouter>
     );
