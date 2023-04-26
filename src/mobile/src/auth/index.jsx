@@ -1,5 +1,3 @@
-import { Navigate, useNavigate } from "react-router-dom";
-
 export const isAuthenticated = () => {
     // Logica de autenticação: buscando localstorage ou alguma outra forma
     if (localStorage.getItem('userInfo')) {
