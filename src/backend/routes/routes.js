@@ -16,9 +16,10 @@ router.post('/setManager', user.setManager)
 
 //rotas do card
 
-router.post('/addCard', card.addCard)
-router.get('/getAllCards', card.getAllCards)
-
+router.post('/task', card.addCard)
+router.get('/tasks', card.getAllCards)
+//router.put('/updateCard/:id', card.deleteCard)
+//router.delete('/task/:id', card.deleteCard)
 
 /*
 router.post('/createUser', async (req, res) => {
