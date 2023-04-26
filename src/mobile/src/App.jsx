@@ -1,11 +1,11 @@
 import './App.css'
-import KanbanBoard from './components/KanbanBoard'
+import Router from './routes'
 
 function App() {
 
   return (
     <>
-      <KanbanBoard />
+      <Router />
     </>
   )
 }
