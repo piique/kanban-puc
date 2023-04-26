@@ -1,15 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const user  = require('../controllers/user'); 
+const card  = require('../controllers/card'); 
+
 const Sequelize = require('sequelize');
 //const UserModel = require('./models/user.js'); 
 
 
 //const User = UserModel(sequelize, Sequelize);
+
 router.post('/addUser', user.addUser)
 router.get('/getAllUsers', user.getAllUsers)
 router.get('/getManager', user.getManager)
 router.post('/setManager', user.setManager)
+
+//rotas do card
+
+router.post('/addCard', card.addCard)
+router.get('/getAllCards', card.getAllCards)
+
 
 /*
 router.post('/createUser', async (req, res) => {

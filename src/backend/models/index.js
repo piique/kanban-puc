@@ -31,11 +31,14 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 
 db.user = require('./userModel.js')(sequelize, DataTypes)
+db.card = require('./cardModel.js')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {
     console.log('yes re-sync done!')
 })
+
+//relações 
 
 
 
