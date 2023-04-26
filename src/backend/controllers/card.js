@@ -7,7 +7,7 @@ const addCard = async (req, res) => {
         name:req.body.name,
         description:req.body.description,
         estimated_pomodoros:req.body.pomodoroCount,
-        status_id:req.body.status
+        status:req.body.status
 
     }
 

@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
       estimated_pomodoros: {
         type: DataTypes.INTEGER,
       },
+      status: {
+        type: DataTypes.INTEGER,
+      },
       estimated_member_pomodoros: {
         type: DataTypes.INTEGER,
       },
