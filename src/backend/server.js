@@ -5,7 +5,6 @@ const app = express()
 app.use(cors())
 
 // middleware
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -17,5 +16,5 @@ app.use('/api', router)
 //port
 
 app.listen(3000, () => {
-    console.log('Servidor iniciado na porta 3000.');
-  });
+    console.log('Servidor iniciado na porta 3000.')
+})
