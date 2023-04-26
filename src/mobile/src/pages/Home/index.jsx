@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { logout } from "../../auth";
 
 const HomePage = () => {
 
@@ -10,7 +11,7 @@ const HomePage = () => {
             <p>Colocar os projetos desse usuario aqui!</p>
             <button onClick={() => navigate('/kanban')}>Projeto 1</button>
             <button onClick={() => navigate('/kanban')}>Projeto 2</button>
-            <button onClick={() => navigate('/kanban')}>Projeto 3</button>
+            <button onClick={() => { logout(); navigate('/login') }}>Logout</button>
         </div>
     );
 };
