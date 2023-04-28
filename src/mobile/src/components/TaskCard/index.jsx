@@ -11,6 +11,8 @@ const TaskCard = ({ task, updateStatusTask }) => {
                 <option value={0}>A fazer</option>
                 <option value={1}>Fazendo</option>
                 <option value={2}>Concluído</option>
+
+
             </select>
         </div>
     )
